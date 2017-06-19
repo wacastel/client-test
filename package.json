@@ -19,6 +19,7 @@
   "homepage": "https://github.com/wacastel/client-test#readme",
   "dependencies": {
     "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2",
     "request": "^2.81.0"
   }
 }
