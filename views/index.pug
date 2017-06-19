@@ -4,5 +4,5 @@ html
   body
     h1= message
     div
-      each obj, index in cars
-        p= obj.year + " " + obj.make + " " + obj.model + "  - accel: " + obj.zero_to_sixty + "s"
+      each car, index in cars
+        p= car.year + " " + car.make + " " + car.model + "  - accel: " + car.accel + "s"
