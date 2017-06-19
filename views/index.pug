@@ -3,3 +3,6 @@ html
     title= title
   body
     h1= message
+    div
+      each obj, index in cars
+        p= obj.year + " " + obj.make + " " + obj.model + "  - accel: " + obj.zero_to_sixty + "s"

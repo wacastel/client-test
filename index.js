@@ -2,7 +2,7 @@ const express = require('express');
 const request = require('request');
 const app = express();
 
-var carData;
+var jsonObject;
 
 app.set('port', (process.env.PORT || 3000));
 app.set('view engine', 'pug');
@@ -12,13 +12,12 @@ request({
   method: "GET"
 }, function(error, response, body) {
   console.log(body);
-  carData = body;
+  jsonObject = JSON.parse(body);
 });
 
 app.get('/', function (req, res) {
-  //res.send('Hello Express World!');
-  console.log("*** car data: ", carData);
-  res.render('index', { title: 'Hey', message: 'Hello there!', carData: carData });
+  console.log("*** car data: ", jsonObject);
+  res.render('index', { title: 'Zero-to-Sixty', message: 'Vehicle Acceleration Times in Seconds', cars: jsonObject });
 })
 
 app.listen(app.get('port'), function () {
