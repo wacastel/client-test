@@ -1,4 +1,6 @@
-var request = require("request");
+const express = require('express')
+const app = express()
+const request = require("request");
 
 request({
   uri: "https://rocky-lowlands-48296.herokuapp.com/cars/",
@@ -6,3 +8,11 @@ request({
 }, function(error, response, body) {
   console.log(body);
 });
+
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!')
+})
