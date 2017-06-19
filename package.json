@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/wacastel/client-test/issues"
   },
-  "homepage": "https://github.com/wacastel/client-test#readme"
+  "homepage": "https://github.com/wacastel/client-test#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
