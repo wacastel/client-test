@@ -2,17 +2,19 @@ const express = require('express');
 const request = require('request');
 const app = express();
 
-/*request({
+app.set('port', (process.env.PORT || 5000));
+
+request({
   uri: "https://rocky-lowlands-48296.herokuapp.com/cars/",
   method: "GET"
 }, function(error, response, body) {
   console.log(body);
-});*/
+});
 
 app.get('/', function (req, res) {
   res.send('Hello Express World!');
 })
 
-app.listen(5000, function () {
-  console.log('Example app listening on port 5000!');
+app.listen(app.get('port'), function () {
+  console.log('Node app is listening on port', app.get('port'));
 })
