@@ -17,7 +17,7 @@ request({
 
 app.get('/', function (req, res) {
   console.log("*** car data: ", jsonObject);
-  res.render('index', { title: 'Zero-to-Sixty', message: 'Vehicle Acceleration Times in Seconds', cars: jsonObject });
+  res.render('index', { title: 'Zero-to-60-MPH Acceleration', message: 'Vehicle Acceleration Times in Seconds', cars: jsonObject });
 })
 
 app.listen(app.get('port'), function () {
