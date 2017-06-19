@@ -2,7 +2,7 @@ const express = require('express');
 const request = require('request');
 const app = express();
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 3000));
 
 request({
   uri: "https://rocky-lowlands-48296.herokuapp.com/cars/",
